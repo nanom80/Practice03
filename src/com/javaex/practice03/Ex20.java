@@ -2,6 +2,7 @@ package com.javaex.practice03;
 
 import java.util.Scanner;
 import java.util.Random;
+import java.util.InputMismatchException;
 
 public class Ex20 {
 	
@@ -23,6 +24,13 @@ public class Ex20 {
 			
 			System.out.print(">>");
 			
+			// 숫자 입력 예외 처리
+            if (!sc.hasNextInt()) {
+                System.out.println("숫자만 입력 가능합니다. 다시 시도하세요.");
+                sc.nextLine(); // 잘못된 입력 제거
+                continue;
+            }
+            
 			num = sc.nextInt();
 			
 			if(num < DeterminedNumber) {
