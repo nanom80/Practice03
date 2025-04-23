@@ -2,7 +2,6 @@ package com.javaex.practice03;
 
 import java.util.Scanner;
 import java.util.Random;
-import java.util.InputMismatchException;
 
 public class Ex20 {
 	
