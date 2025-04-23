@@ -12,7 +12,6 @@ public class Ex20 {
 		
 		int DeterminedNumber = rand.nextInt(100);
 		System.out.println("DeterminedNumber: "+DeterminedNumber);
-		String input = "";
 		int num = 0;
 		String yn = "";
 		
