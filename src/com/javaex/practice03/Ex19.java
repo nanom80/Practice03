@@ -8,22 +8,34 @@ public class Ex19 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("숫자를 입력하세요: ");
+		int num = 0;
+		long amount = 0;
+		long balance = 0;
 		
-		int num = sc.nextInt();
-		
-		for(int i=num; i>=1; i--) {
-			for(int j=i; j>=1; j--) {
-				System.out.print("*");
+		while(true) {
+			System.out.println("-----------------------------");
+			System.out.println(" 1.예금|2.출금|3.잔고|4.종료");
+			System.out.println("-----------------------------");
+			System.out.print("선택>");
+			
+			num = sc.nextInt();
+			
+			if(num==1) {
+				System.out.print("예금액> ");
+				amount = sc.nextLong();
+				balance += amount;
+			}else if(num==2) {
+				System.out.print("출금액> ");
+				amount = sc.nextLong();
+				balance -= amount;
+			}else if(num==3) {
+				System.out.println("잔고액> "+balance);
+			}else if(num==4) {
+				System.out.println("프로그램 종료");
+				break;
+			}else {
+				System.out.println("다시 입력해주세요");
 			}
-			System.out.println("");
-		}
-		
-		for(int k=2; k<=num; k++) {
-			for(int l=1; l<=k; l++) {
-				System.out.print("*");
-			}
-			System.out.println("");
 		}
 		
 		sc.close();
